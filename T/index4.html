@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio CV - Professional Template</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:40px;
+    box-sizing:border-box;
+  }
+
+  .container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    background: rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  /* Profile Card */
+  .card {
+    background:#fff;
+    width:300px;
+    border-radius:20px;
+    text-align:center;
+    padding:30px 20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .profile-img {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin-top:-60px;
+    border:5px solid #fff;
+    object-fit:cover;
+  }
+
+  .card h2 {
+    margin:15px 0 5px;
+    color:#333;
+  }
+
+  .card p.title {
+    color:#777;
+    margin:0 0 15px;
+    font-size:14px;
+  }
+
+  .skills {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:15px;
+  }
+
+  .skill {
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+  }
+
+  .social {
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:15px;
+  }
+
+  .social a {
+    color:#6a11cb;
+    font-size:20px;
+  }
+
+  .download-btn {
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+  }
+
+  /* CV/Resume Style */
+  .cv {
+    background:#fff;
+    width:650px;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    font-size:14px;
+    line-height:1.6;
+    color:#333;
+  }
+
+  .cv-header {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom:3px solid #6a11cb;
+    padding-bottom:10px;
+    margin-bottom:20px;
+  }
+
+  .cv-header h1 {
+    margin:0;
+    color:#6a11cb;
+    font-size:28px;
+  }
+
+  .cv-header p {
+    margin:0;
+    font-size:14px;
+    color:#777;
+  }
+
+  .cv-body {
+    display:flex;
+    gap:20px;
+  }
+
+  .left-column {
+    width:45%;
+  }
+
+  .right-column {
+    width:55%;
+  }
+
+  .section {
+    margin-bottom:20px;
+  }
+
+  .section h2 {
+    font-size:16px;
+    margin-bottom:10px;
+    color:#2575fc;
+    border-bottom:2px solid #2575fc;
+    padding-bottom:3px;
+  }
+
+  .section ul {
+    list-style:none;
+    padding-left:0;
+    margin:0;
+  }
+
+  .section ul li {
+    margin-bottom:8px;
+    position:relative;
+    padding-left:20px;
+  }
+
+  .section ul li::before {
+    content:'•';
+    position:absolute;
+    left:0;
+    color:#6a11cb;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Profile Card -->
+  <div class="card">
+    <img src="https://via.placeholder.com/120" alt="Profile Image" class="profile-img">
+    <h2>Jane Doe</h2>
+    <p class="title">Full-Stack Developer</p>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Node.js</span>
+    </div>
+    <div class="social">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <button class="download-btn" onclick="downloadCV()">Download CV</button>
+  </div>
+
+  <!-- Professional CV -->
+  <div class="cv" id="cv-content">
+    <div class="cv-header">
+      <h1>Jane Doe</h1>
+      <p>jane.doe@example.com | +123456789</p>
+    </div>
+
+    <div class="cv-body">
+      <!-- Left Column -->
+      <div class="left-column">
+        <div class="section">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Express, MongoDB</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Education</h2>
+          <ul>
+            <li>B.Sc. Computer Science - University of Tech (2018-2022)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <div class="section">
+          <h2>Experience</h2>
+          <ul>
+            <li>Web Developer at ABC Corp (2022–Present)</li>
+            <li>Frontend Intern at XYZ Ltd (2021–2022)</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Profile</h2>
+          <p>Passionate full-stack developer with 3+ years experience building modern web applications. Skilled in front-end and back-end technologies, responsive design, and user-centered development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  async function downloadCV() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({
+      orientation: 'portrait',
+      unit: 'px',
+      format: [650, 800]
+    });
+    const cv = document.getElementById("cv-content");
+
+    await doc.html(cv, {
+      callback: function(doc) {
+        doc.save("JaneDoe_CV.pdf");
+      },
+      x: 10,
+      y: 10,
+      html2canvas: { scale: 0.5 }
+    });
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+</html>
